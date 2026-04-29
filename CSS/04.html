@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css display방식</title>
+  <style>
+    *{ margin: 0; padding: 0;}
+    ul{ 
+      height: 800px;
+      background-color: #888;
+      margin: 24px 0;
+      /* 피그마에서 오토레이아웃 처리 */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;   /* 주축의 정렬 */
+      align-items: baseline;   /* 교차축의 정렬 */
+      gap: 8px;  /** 사이 여백 */
+      flex-wrap: wrap;
+    }
+    li{
+      /* display: inline-block; */      
+      padding: 16px;
+      list-style: none;
+      background-color: tomato;
+      border: 1px solid #000;
+    }
+    .list-01{
+      /* order: 1; */
+    }
+    .list-02{
+      align-self: flex-end;
+      order: -1;
+    }
+  </style>
+</head>
+<body>
+  <h1>display 방식</h1>
+  <ul>
+    <li class="list-01">리스트-01</li>
+    <li style="font-size: 20px;" class="list-02">리스트-02</li>
+    <li style="font-size: 40px;">리스트-03</li>
+    <li>리스트-04</li>
+  </ul>
+</body>
+</html>

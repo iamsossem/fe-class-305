@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>목록태그</title>
+  <style>
+    table{
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <!-- 순서가 있는 목록: 1,2,3,4....,a,b,c, : ol
+       순서가 없는 목록: - -, ul
+       정의형 목록 : 사전형 dl
+       alt + shift + 아래방향/위방향
+       emmit : ol>li*4{리스트$}
+  -->
+  <ol type="i">
+    <li>리스트1</li>
+    <li>리스트2</li>
+    <li>리스트3</li>
+    <li>리스트4</li>
+  </ol> 
+  <ul type="square">
+    <li>리스트1</li>
+    <li>리스트2</li>
+    <li>리스트3</li>
+    <li>리스트4</li>
+  </ul>
+  <dl>
+    <dt>HTML</dt>
+    <dd>hyper text markup language</dd>
+  </dl>
+  <!-- 표만들기 -->
+  <!-- table>tr*3>td*2 -->
+  <!-- table>(tr>td{1-$}*2)+(tr>td{2-$}*2)+(tr>td{3-$}*2) -->
+   <table border="1">
+    <tr>
+      <td>1-1</td>
+      <td>1-2</td>
+    </tr>
+    <tr>
+      <td>2-1</td>
+      <td>2-2</td>
+    </tr>
+    <tr>
+      <td>3-1</td>
+      <td>3-2</td>
+    </tr>
+   </table>
+</body>
+</html>

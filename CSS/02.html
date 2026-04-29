@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 기본 선택자</title>
+  <style>
+    /* 전체선택자 : reset.css*/
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    /* 태그선택자 */
+    body{
+      background-color: tomato;
+    }
+    ul{
+      background-color: #fff;
+    }
+    /* 아이디 선택자(#아이디명), 
+       클래스 선택자(.클래스명) */
+    #tag{
+      color: blue;
+    }
+    .select{
+      background-color: yellow;
+    }
+    /* 부모자식관계(>):바로 한단계 아래, 
+       상위하위관계( ): 모든 깊이 태그 */
+    /* body > .select{ */
+    body .select{
+      background-color: orange;
+      color: red !important;
+    } 
+    h1,p{
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="select">CSS 기본 선택자</h1>
+  <ul>
+    <li>전체 선택자</li>
+    <li id="tag" class="select">태그 선택자</li>
+    <li>아이디 선택자</li>
+    <li>클래스 선택자</li>
+  </ul>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nesciunt consectetur illo laborum nemo. Minus eius, neque aspernatur molestiae libero, nobis expedita quidem dolores fugiat itaque ipsam atque, ut officia.</p>
+</body>
+</html>

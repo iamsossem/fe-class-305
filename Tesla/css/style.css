@@ -1,0 +1,139 @@
+@charset 'utf-8';
+:root {
+  /* --변수명 */
+  --primary-color: #3e6ae1;
+  --white-color: #fff;
+  --black-color: #111;
+  /* 폰트사이즈 */
+  --type-title: 40px;
+  --type-base: 16px;
+}
+body{
+  width: 440px;  
+}
+/* 공통사항 */
+.btn-wrap {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  button {
+    cursor: pointer;
+    flex: 1;
+    padding: 8px 0;
+    border: none;
+    border-radius: 4px;
+  }
+  /* while hovering : 가상 선택자*/
+  button:hover {
+    filter: brightness(70%);
+  }
+  .btn-blue {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+  }
+  .btn-white {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    border: 1px solid var(--black-color);
+  }
+}
+/* 인디케이터 */
+.indicator{
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.indicator > div{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #8B8C8F;
+}
+.indicator > .active{
+  background-color: #171A20;
+}
+/* header 영역 */
+header {
+  background-image: url(../assets/images/01.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--white-color);
+  height: 580px;
+  nav {
+    display: flex; /* figma auto layout */
+    justify-content: space-between; /* gap: auto */
+    padding: 32px;
+    .logo {
+      letter-spacing: 16px;
+    }
+    .menu-icon {
+      padding: 8px 16px;
+      /* fill : background */
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+/* 부모자식(>) 관계를 중심으로 css 선택자 사용 */
+#sec01 > .sec01-cardlist{
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  /* clip content : 부모에서 설정*/
+  overflow: hidden;
+}
+#sec01 > .sec01-cardlist > .item01{
+  background-image: url(../assets/images/07.jpg);
+  background-size: cover;
+}
+#sec01 > .sec01-cardlist > .item02{
+  background-image: url(../assets/images/06.jpg);
+  background-size: cover;
+}
+
+#sec01 > .sec01-cardlist > .sec01-card{
+  width: 285px;
+  min-width: 285px;
+  height: 465px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;    
+  color: var(--white-color);
+  border-radius: 8px;
+}
+#sec01>.sec01-cardlist>.sec01-card>.bottom-text>.btn-wrap{
+  padding: 0;
+}
+
+#sec02{
+  padding: 64px 16px;
+}
+#sec02 > .sec02-card{
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 16px 0;
+}
+#sec02 > .sec02-card > .sec02-img{
+  height: 180px;
+  background-size: cover;
+}
+#sec02 > .sec02-card > .sec02-txt{
+  background-color: #f4f4f4;
+  padding: 16px 32px;
+}
+#sec02 > .sec02-card > .sec02-txt > .btn-wrap{
+  padding: 0;
+  width: 250px;
+}
+#sec02 > .item01 > .sec02-img{
+  background-image: url(../assets/images/02.jpg);
+}
+#sec02 > .item02 > .sec02-img{
+  background-image: url(../assets/images/03.jpg);
+}
