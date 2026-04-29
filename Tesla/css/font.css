@@ -16,9 +16,12 @@
   font-size: 20px;
 }
 
+/* h2 */
 .nanum-gothic-extrabold {
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 40px;
+  /* font-size: 40px; */
+  /* clamp(최소값,변경값,최대값) */
+  font-size: clamp(40px, 10vw ,180px);
 }

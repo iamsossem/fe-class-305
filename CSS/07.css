@@ -1,0 +1,28 @@
+@charset 'utf-8';
+* {
+  margin: 0;
+  padding: 0;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  height: 100vh;
+}
+.wrap {
+  width: 80%;
+  height: 80%;
+  background-color: #ddd;
+  position: relative;
+}
+.box{
+  background-color: tomato;
+  padding: 1rem; /* 16px */
+  /* position: static; */
+  /* position: relative; */
+  position: absolute;
+  top: 0;
+  right: 0;
+}

@@ -8,17 +8,22 @@
   --type-title: 40px;
   --type-base: 16px;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
-  width: 440px;  
+  /* width: 440px;   */
 }
 /* 공통사항 */
-.btn-wrap {
+.btn-wrap {  
   display: flex;
+  justify-content: center;
   gap: 8px;
   padding: 16px;
   button {
+    width: 200px;
     cursor: pointer;
-    flex: 1;
+    /* flex: 1; */
     padding: 8px 0;
     border: none;
     border-radius: 4px;
@@ -35,6 +40,10 @@ body{
     background-color: var(--white-color);
     color: var(--black-color);
     border: 1px solid var(--black-color);
+  }
+  .btn-black{
+    background-color: var(--black-color);
+    color: var(--white-color);
   }
 }
 /* 인디케이터 */
@@ -97,9 +106,11 @@ header {
 }
 
 #sec01 > .sec01-cardlist > .sec01-card{
-  width: 285px;
+  /* width: 285px; */
+  width: 50%;
   min-width: 285px;
-  height: 465px;
+  /* height: 465px; */
+  aspect-ratio: 1/1.5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -136,4 +147,79 @@ header {
 }
 #sec02 > .item02 > .sec02-img{
   background-image: url(../assets/images/03.jpg);
+}
+
+/* 상위/하위  (공백문자) 를 이용하기 */
+#sec03{
+  padding: 16px;
+  height: 475px;
+  position: relative;
+}
+#sec03 video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+#sec03 .sec03-txt{
+  position: absolute;
+  bottom: 30px;
+  left: 24px;
+  color: var(--white-color);
+}
+#sec03 .btn-wrap{
+  padding: 0;
+  width: 50%;
+}
+
+#sec04{}
+#sec04 .sec04-img{
+  height: 343px;
+  background-image: url(../assets/images/map.jpg);
+  background-size: cover;
+}
+#sec04 .sec04-txt{
+  padding: 32px 16px;
+}
+#sec04 .sec04-txt-icons-num{
+  display: flex;
+  align-items: center;
+}
+#sec04 .sec04-txt-2{
+  display: flex;
+  gap: 16px;
+  padding: 32px 0;
+}
+#sec05{
+  padding: 16px;
+}
+#sec05 .sec05-card{
+  width: 285px;
+  min-width: 285px;
+  height: 465px;
+  color: var(--white-color);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 16px;
+}
+#sec05 .item01{
+  background-image: url(../assets/images/05.jpg);
+}
+#sec05 .item02{
+  background-image: url(../assets/images/04.jpg);
+}
+#sec05 .sec05-cardlist{
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  overflow: hidden;
+}
+footer{
+  padding: 32px 0;
+  text-align: center;
+}
+footer > ul > li{
+  padding: 8px 0;
 }

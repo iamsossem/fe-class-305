@@ -14,6 +14,13 @@
         <p class="logo nanum-gothic-bold">TESLA</p>
         <p class="menu-icon nanum-gothic-bold">메뉴</p>
       </nav>
+      <ul>
+        <!-- 앵커기능 -->
+        <li><a href="#sec01">섹션1</a></li>
+        <li><a href="#sec02">섹션2</a></li>
+        <li><a href="#sec03">섹션3</a></li>
+        <li><a href="#sec04">섹션4</a></li>
+      </ul>
       <h2 class="nanum-gothic-extrabold">Model 3</h2>
       <div class="btn-wrap">
         <button class="btn-blue">주문하기</button>
@@ -74,10 +81,96 @@
           </div>
         </div>
       </section>
-      <section></section>
-      <section></section>
-      <section></section>
+      <section id="sec03">
+        <video
+          src="./assets/media/video.mp4"
+          controls
+          loop
+          autoplay
+          muted
+        ></video>
+        <div class="sec03-txt">
+          <h2 class="nanum-gothic-extrabold">풀 셀프 드라이빙(감독형)</h2>
+          <div class="btn-wrap">
+            <button class="btn-blue">자세히보기</button>
+          </div>
+        </div>
+      </section>
+      <section id="sec04">
+        <div class="sec04-img"></div>
+        <div class="sec04-txt">
+          <div class="sec04-txt-1">
+            <h2 class="nanum-gothic-extrabold">충전</h2>
+            <p>
+              주변에서 이용 가능한 Tesla 수퍼차저 및 데스티네이션 차저
+              네트워크를 확인해 보세요.
+            </p>
+          </div>
+          <div class="sec04-txt-2">
+            <div class="sec04-txt-icons">
+              <div class="sec04-txt-icons-num">
+                <h2 class="nanum-gothic-extrabold">7,342</h2>
+                <img
+                  src="./assets/icons/energy.svg"
+                  alt="수퍼차저 번개 아이콘"
+                />
+              </div>
+              <p>수퍼차저</p>
+            </div>
+            <div class="sec04-txt-icons">
+              <div class="sec04-txt-icons-num">
+                <h2 class="nanum-gothic-extrabold">711</h2>
+                <img
+                  src="./assets/icons/outlet.svg"
+                  alt="수퍼차저 콘세트 아이콘"
+                />
+              </div>
+              <p>데스티네이션 차저</p>
+            </div>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn-black">충전 네트워크 보기</button>
+            <button class="btn-white">자세히 알아보기</button>
+          </div>
+        </div>
+      </section>
+      <section id="sec05">
+        <div class="sec05-cardlist">
+          <div class="sec05-card item01">
+            <div class="sec05-card-txt">
+              <h2 class="nanum-gothic-extrabold">Powerwall</h2>
+              <p>정전 시에도 조명은 그대로</p>
+              <div class="btn-wrap">
+                <button class="btn-blue">자세히 알아보기</button>
+              </div>
+            </div>
+          </div>
+          <div class="sec05-card item02">
+            <div class="sec05-card-txt">
+              <h2 class="nanum-gothic-extrabold">Megapack</h2>
+              <p>대규모 에너지 공급을 위한 초대형 배터리 시스템</p>
+              <div class="btn-wrap">
+                <button class="btn-blue">자세히 알아보기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="indicator">
+          <div class="active"></div>
+          <div></div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <ul>
+        <li>Tesla &copy; 2026</li>
+        <li>개인정보처리방침</li>
+        <li>법적 고지</li>
+        <li>이용 약관</li>
+        <li>문의하기</li>
+        <li>새 소식</li>
+        <li>위치</li>
+      </ul>      
+    </footer>
   </body>
 </html>
