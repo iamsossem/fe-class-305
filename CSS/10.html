@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형</title>
+  <style>
+    html{
+      font-size: 20px;
+    }
+    .outer{
+      font-size: 40px;
+    }
+    p.em-exam{
+      font-size: 2em;   /* 부모의 폰트사이즈 = 1em*/
+    }
+    p.rem-exam{
+      font-size: 2rem;  
+    }
+  </style>
+</head>
+<body>
+  <!-- em/rem  -->
+  <p>body아래</p>
+  <div class="outer">
+    <p class="em-exam">em 단위 예시</p>
+    <p class="rem-exam">rem 단위 예시</p>
+  </div>
+</body>
+</html>

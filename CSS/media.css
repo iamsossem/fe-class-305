@@ -1,0 +1,82 @@
+@charset 'utf-8';
+
+/* 모바일 우선 */
+*{ margin: 0; padding: 0;}
+html{
+  font-size: 16px;
+}
+.card-list{}
+.card-list > .card{
+  width: 250px;
+  border: 1px solid #111;
+}
+.card-list > .card > .card-top{  
+  aspect-ratio: 1/1;
+  background-color: #888;
+}
+.card-list > .card > .card-middle{
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  h3{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .profile{
+    display: flex;
+    gap: 0.5rem;
+  }
+  .profile-img{
+    width: 1rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid #111;
+    background-color: #888;
+  }
+  .profile-txt{
+    font-size: 0.75rem;
+    text-decoration: underline;
+  }
+}
+.card-list > .card > .card-bottom{
+  font-size: 0.75rem;
+  display: flex;
+  div{
+    display: flex;
+    gap: 2px;
+  }
+  .price{
+    width: 60%;
+    padding: 1rem;
+    border-right: 1px solid #111;
+  }
+  .rating{
+    width: 40%;
+    padding: 1rem;
+  }
+}
+
+
+/* 미디어쿼리 */
+/* 테블릿 */
+@media screen and (min-width:403px) and (max-width:1279px) {
+  html{
+    font-size: 20px;
+  }
+  .card-list > .card{
+    width: 300px;
+  }
+}
+/* 데스트탑 */
+@media screen and (min-width:1280px) {
+  html{
+    font-size: 24px;
+  }
+  .card-list > .card{
+    width: 500px;
+  }
+}

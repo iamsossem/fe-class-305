@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어쿼리</title>
+  <style>
+    /* 모바일 우선순위 : css처리는 모바일*/ 
+    /* 모드: mobile(402px), table(768px), desktop(1280px) */
+   
+    /* 모바일 */
+    body{
+      background-color: tomato;
+    }
+
+    @media all and (min-width:403px) and (max-width:768px) {
+      /* 테블릿 */
+      body{
+        background-color: aqua;
+      }
+    }
+    @media all and (min-width:769px) {
+      /* 데스크탑 */
+      body{
+        background-color: blueviolet;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+</body>
+</html>
