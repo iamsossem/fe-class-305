@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 태그</title>
+    <link rel="stylesheet" href="./02.css" />
+  </head>
+  <body>
+    <h1>웹 프론트엔드 과정 사전 설문</h1>
+    <form method="get">
+      <div class="input-group">
+        <label for="input-name">이름</label>
+        <input
+          type="text"
+          name="input-name"
+          id="input-name"
+          placeholder="홍길동"
+        />
+      </div>
+      <div class="input-group">
+        <label>연령대</label>
+        <select name="select-age" id="select-age">
+          <option value="20s">20대</option>
+          <option value="30s">30대</option>
+          <option value="40s">40대</option>
+          <option value="50s">50대 이상</option>
+        </select>
+      </div>
+      <div class="box-group">
+        <label>수강목적<span class="desc">(하나만 선택)</span></label>
+        <label>
+          <input type="radio" name="purpose" value="job" />
+          <span>취업 및 이직</span>
+        </label>
+        <label>
+          <input type="radio" name="purpose" value="hobby" />
+          <span>자기계발 및 취미</span>
+        </label>
+      </div>
+      <div class="box-group">
+        <label>관심 기술<span class="desc">(자유롭게 선택)</span></label>
+        <label>
+          <input type="checkbox" name="skills" value="html" />
+          <span>HTML/CSS</span>
+        </label>
+        <label>
+          <input type="checkbox" name="skills" value="js" />
+          <span>JavaScript</span>
+        </label>
+        <label>
+          <input type="checkbox" name="skills" value="figma" />
+          <span>Figma AI 디자인</span>
+        </label>
+      </div>
+      <div class="box-group">
+        <label for="feedback">강사에게 전하고 싶은 말</label>
+        <textarea
+          rows="10"
+          name="feedback"
+          id="feedback"
+          placeholder="궁금환 점을 적어주세요."
+        ></textarea>
+      </div>
+      <div class="btn-wrap">
+        <button type="reset" class="reset">작성 초기화</button>
+        <button type="submit" class="submit">설문 제출하기</button>
+      </div>
+    </form>
+  </body>
+</html>

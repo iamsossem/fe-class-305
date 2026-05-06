@@ -5,20 +5,44 @@
 html{
   font-size: 16px;
 }
-.card-list{}
+body{
+  overflow-x: hidden;
+}
+.card-list{
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
 .card-list > .card{
   width: 250px;
+  min-width: 250px;
   border: 1px solid #111;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  /* &:hover{
+    box-shadow: 4px 4px 0 #111;
+  } */
+}
+.card-list > .card:hover{
+  box-shadow: 4px 4px 0 #111;
 }
 .card-list > .card > .card-top{  
+  width: 100%;
   aspect-ratio: 1/1;
   background-color: #888;
 }
-.card-list > .card > .card-middle{
+.card-list > .card > .card-detail{
+  width: 100%;
+  aspect-ratio: 1/0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-list > .card > .card-detail > .card-middle{
   border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
   padding: 1rem;
-  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -42,8 +66,10 @@ html{
     text-decoration: underline;
   }
 }
-.card-list > .card > .card-bottom{
+.card-list > .card .card-bottom{
+  border-top: 1px solid #111;
   font-size: 0.75rem;
+  width: 100%;
   display: flex;
   div{
     display: flex;
@@ -53,6 +79,19 @@ html{
     width: 60%;
     padding: 1rem;
     border-right: 1px solid #111;
+    .price-ribbon{
+      background-color: #FF90E8;
+      padding: 2px;
+      padding-right: 14px;
+      border: 0.5px solid #111;
+      position: relative;
+      img{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -1px;
+      }
+    }
   }
   .rating{
     width: 40%;
@@ -77,6 +116,17 @@ html{
     font-size: 24px;
   }
   .card-list > .card{
-    width: 500px;
+    width: 800px;
+    min-width: 800px;
+    flex-direction: row;
+  }
+  .card-list > .card > .card-top{
+    width: 50%;
+  }
+  .card-list > .card > .card-detail{
+    width: 50%;
+  }
+  .card-list > .card > .card-detail > .card-middle{
+    border: none;
   }
 }

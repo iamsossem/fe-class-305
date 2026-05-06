@@ -1,0 +1,125 @@
+@charset 'utf-8';
+
+*{ 
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  justify-content: center;
+  gap: 1rem;
+}
+.container > .card{
+  /* width: 300px; */
+  .card-img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #888;
+    border-radius: 2rem;
+    padding: 1rem;
+    .card-img-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .one{
+      padding: 2px 4px;
+      background-color: #111;
+      color: #fff;
+      border-radius: 1rem;
+    }
+    .two{
+      font-size: 1.5rem;
+      -webkit-text-stroke-color: #fff;
+      -webkit-text-stroke-width: 1px;
+    }
+  }
+  .card-txt{
+    padding: 0.5rem;
+    .card-txt-bottom{
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+}
+
+/* header */
+header{
+  display: grid;
+  grid-template-areas: "area-search"
+                       "area-service";
+}
+header > h1{
+  color: #FF385C;
+  display: none;
+  grid-area: area-logo;
+}
+header > .service{
+  grid-area: area-service;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header > nav{
+  /* display: flex; */
+  display: none;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  grid-area: area-menu;
+}
+header > .desktop-search{
+  grid-area: area-desktop;
+  margin: 1rem 5rem;
+  padding: 1rem 0;
+  /* display: flex; */
+  display: none;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 3rem;
+  p{
+    flex: 1;
+    padding: 1rem;
+    border-right: 1px solid #666;
+  }
+  p.search-icon{
+    background-color: #FF385C;
+    position: absolute;
+    border-radius: 2rem;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right: none;
+  }
+  p.search-last{
+    border-right: none;
+  }
+}
+header > .mobile-search{
+  grid-area: area-search;
+  margin: 1rem 3rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* 1024보다 커지면 처리 */
+@media screen and (min-width:1024px){
+  header{
+    padding: 3rem;
+    grid-template-areas: "area-logo area-service area-menu"
+                         "area-desktop area-desktop area-desktop";
+  }
+  header > h1{ display: block;}
+  header > nav{ display: flex; }
+  header > .desktop-search{ display: flex;}
+  header > .mobile-search{ display: none;}
+}

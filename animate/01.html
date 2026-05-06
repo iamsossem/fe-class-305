@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <style>
+    *{ margin: 0; padding: 0;}
+    body{
+      /* 모니터와 내 눈사이의 거리 : 800px~1000px*/
+      perspective: 800px;
+    }
+    .box{
+      margin: 5rem;
+      width: 100px;
+      height: 100px;
+      background-color: tomato; 
+      transition: 1s;  
+      &:hover{
+        /* transform: translateX(1000px); */
+        /* transform: scale(1.5); */
+        /* x축을 기준으로 45도 로테이션 */
+        transform: rotateY(45deg); 
+      }   
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
